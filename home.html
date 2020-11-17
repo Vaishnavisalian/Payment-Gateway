@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Donation Camp</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+  <div class="pimg1">
+    <div class="ptext">
+     <center><button onclick="window.location.href='donate.html'"><b>Donate</b></button>
+      <p>Click here to Donate!!!</p></center>
+    </div>
+  </div>
+
+  <section class="section">
+    <h2 style="text-align: center; color: red">About Us</h2>
+    <p style="text-align: left;color: white">Hello, We are running this campaign towards the dream of providing education to not so privileged children. We are going to provide this kids with food and enabling education for them. <br>
+    Our goal is to ensure children have access to free and quality education, healthcare, nutrition and a safe and secure environment to grow up in.
+    And this has been possible only with the support and love of volunteers and donors like YOU.
+    Together, we can help ensure a happy, healthy and creative childhood for every child in India.
+    </p>
+
+    <h3 style="text-align: center;color: black"><i>“The best way to not feel hopeless is to get up and do something. Don’t wait for good things to happen to you. If you go out and make some good things happen, you will fill the world with hope, you will fill yourself with hope.”</i>
+    ― Barack Obama</h3>
+
+    <img src="img/1.jpg" style="margin-left: 200px;" />
+  </section>
+
+  <div class="pimg2">
+    <div class="ptext">
+      
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="contact-form">
+        <h2 style="color: black;">Contact Us</h2>
+        <form name="f1" action="I1.html" onsubmit="return matchpass()">
+
+          <input id="user" type="text" placeholder="Name" class="contact-form-txt"  />
+          <input id="mail" type="text" placeholder="Email" class="contact-form-txt" />
+          <textarea id="message" placeholder="Message" class="contact-form-textarea" >
+          </textarea>
+          <input type="submit" name="Submit" class="contact-form-btn" />
+          <p><br><u>Child Foundation</u></br></p>
+          <p>Email address-donateforkids@gmail.com</p>
+          <p>Address-Pune,Maharasthra</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+<script type="text/javascript">
+function validateEmail(elementValue)
+ { 
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; 
+        return emailPattern.test(elementValue); 
+} 
+function matchpass(){  
+var uname=document.f1.user.value;
+var em=document.f1.mail.value;
+var m=document.f1.message.value;
+ 
+if(m==null||m==""){
+  alert("Message can't be blank");  
+  return false; 
+}
+else
+if (uname==null || uname==""){  
+  alert("Name can't be blank");  
+  return false;  
+}
+ else
+    if (em==null || em==""){
+      alert("Email can't be blank");
+       return false;
+    }
+    else 
+        if(validateEmail(em))
+            return true;
+        else{
+             alert("The email doesn't match the pattern required (@ and . is a must)");
+             return false;
+            }
+
+} 
+</script>
+</html>
